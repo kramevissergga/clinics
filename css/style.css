@@ -152,7 +152,8 @@ h6 {
   background-color: #fff;
   display: flex;
   align-items: center;
-  gap: .75rem
+  gap: .75rem;
+  transition: all .3s
 }
 .splide__arrow svg path {
   width: 1.5rem;
@@ -217,8 +218,7 @@ h6 {
   border: none
 }
 .splide__list {
-  align-items: flex-start;
-  transition: height .2s
+  transition: all .3s ease
 }
 .ibg {
   width: 100%;

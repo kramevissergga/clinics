@@ -2925,9 +2925,7 @@
             autoHeight: true,
             perPage: 1,
             rewind: false,
-            drag: false,
-            arrows: false,
-            updateOnMove: true
+            arrows: false
         }).mount();
         parentSplide.querySelectorAll("[data-child-slider]").forEach((function(slider) {
             var childSlider = new Splide(slider, {
@@ -2938,7 +2936,6 @@
                 drag: false,
                 rewind: false,
                 heightRatio: .75,
-                updateOnMove: true,
                 classes: {
                     pagination: "splide__pagination",
                     page: "splide__pagination-page"
@@ -2962,12 +2959,11 @@
                 if (!isParentAtStart) if (isChildAtStart) {
                     prevButton.removeAttribute("disabled");
                     prevButton.setAttribute("data-parent-prev", "");
-                } else prevButton.removeAttribute("data-parent-prev");
+                } else prevButton.removeAttribute("data-parent-prev"); else if (isChildAtStart) prevButton.setAttribute("disabled", "");
                 if (!isParentAtEnd) if (isChildAtEnd) {
-                    console.log(isChildAtEnd);
                     nextButton.removeAttribute("disabled");
                     nextButton.setAttribute("data-parent-next", "");
-                } else nextButton.removeAttribute("data-parent-next");
+                } else nextButton.removeAttribute("data-parent-next"); else if (isChildAtEnd) nextButton.setAttribute("disabled", "");
             }
             updateButtonState();
             childSlider.on("moved", (function() {
@@ -2977,6 +2973,7 @@
             splideParent.on("moved", (function() {
                 updateParentState(splideParent.index);
                 updateButtonState();
+                console.log(isParentAtStart);
             }));
             nextButton.addEventListener("click", (function() {
                 if (nextButton.hasAttribute("data-parent-next")) splideParent.go("+1");
