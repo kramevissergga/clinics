@@ -2909,10 +2909,12 @@
             splideList.appendChild(splideSlide);
         }));
         splideTrack.appendChild(splideList);
+        let backgroundImage = clinicSlider.querySelector(".slider-clinic__background");
+        let backgroundImageMobile = clinicSlider.querySelector(".slider-clinic__background--mobile");
+        splideParent.appendChild(backgroundImage);
+        splideParent.appendChild(backgroundImageMobile);
         splideParent.appendChild(splideTrack);
-        clinicSlider.querySelectorAll(".slider-clinic__item").forEach((item => {
-            clinicSlider.removeChild(item);
-        }));
+        clinicSlider.innerHTML = "";
         clinicSlider.appendChild(splideParent);
     }));
     document.querySelectorAll("[data-parent-slider]").forEach((function(parentSplide, parentIndex) {

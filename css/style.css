@@ -217,13 +217,8 @@ h6 {
   border: none
 }
 .splide__list {
-  align-items: flex-start
-}
-.splide__slide {
-  transition: height .4s
-}
-.splide__slide:not(.is-active) {
-  height: 0
+  align-items: flex-start;
+  transition: height .2s
 }
 .ibg {
   width: 100%;
@@ -391,8 +386,9 @@ h6 {
   opacity: .05
 }
 .slider-clinic__background--mobile {
+  top: 0;
   width: 100%;
-  opacity: 1
+  opacity: .5
 }
 .logo {
   position: absolute;
