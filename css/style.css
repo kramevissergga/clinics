@@ -850,8 +850,7 @@ h6 {
   }
   .video-box__play:hover img {
     -webkit-transform: scale(.9);
-    transform: scale(.9);
-    opacity: 0
+    transform: scale(.9)
   }
   .video-box__play._hide:hover img {
     -webkit-transform: scale(0);
