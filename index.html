@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Home</title>
+	<title>Clinics</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -18,26 +18,26 @@
 		<header class="header">
 			<div class="header__container">
 				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
 							<li class="menu__item">
-								<a href="#about" data-goto-header data-goto="#about" class="menu__link">
+								<a href="#about" data-goto-top="30px" data-goto-header data-goto="#about" class="menu__link">
 									about
 								</a>
 							</li>
 							<li class="menu__item">
-								<a href="#promo-video" data-goto-header data-goto="#promo-video" class="menu__link">
+								<a href="#promo-video" data-goto-top="30px" data-goto-header data-goto="#promo-video"
+									class="menu__link">
 									video
 								</a>
 							</li>
 							<li class="menu__item">
-								<a href="clinics" data-goto-header data-goto="#clinics" class="menu__link">
+								<a href="clinics" data-goto-top="30px" data-goto-header data-goto="#clinics" class="menu__link">
 									clinics
 								</a>
 							</li>
 							<li class="menu__item">
-								<a href="contact" data-goto-header data-goto="#contact" class="menu__link">
+								<a href="contact" data-goto-top="30px" data-goto-header data-goto="#contact" class="menu__link">
 									contact
 								</a>
 							</li>
@@ -48,7 +48,9 @@
 		</header>
 		<main class="page">
 			<div class="page__image">
+
 				<img src="img/hero.webp" alt="main image" class="ibg">
+
 			</div>
 			<section id="about" class="page__about about">
 				<div class="about__container">
@@ -85,98 +87,121 @@
 					</div>
 				</div>
 			</div>
-			<section id="clinics" class="page__clinic clinic">
-				<div class="clinic__container">
-					<h2 class="clinic__title title">ZAPORIZHYA</h2>
-					<div class="clinic__text text">
-						<p>
-							Zaporizhzhia. 5th City Hospital of Emergency and Urgent Medical Care.  
-						</p>
-					</div>
-				</div>
-				<div class="clinic__slider slider-clinic">
-					<!--Спрощене заповнення даними для слайдера, потім js перетворить це на франкенштейна, приклад якого можна побачити в файлі slider-full.html-->
-					<div class="slider-clinic__item">
-						<div class="slider-clinic__images">
-							<img class="ibg" src="img/slider/01.webp" alt="Image">
-							<img class="ibg" src="img/slider/02.webp" alt="Image">
-							<img class="ibg" src="img/slider/03.webp" alt="Image">
-							<img class="ibg" src="img/slider/01.webp" alt="Image">
-						</div>
-						<div class="slider-clinic__text">
-							<blockquote class="slider-clinic__blockquote">
-								<p>
-									«Емоційне вигорання торкнулося багатьох наших колег, всі ми прекрасно розуміємо, що відбути
-									навіть у коротку відпустку  - недозволена розкіш. В будь-який момент ми можемо знадобитись
-									тут,
-									у лікарні...»
-								</p>
-								<cite class="slider-clinic__cite">- Євген Яцун, завідувач ортопедично-травматологічного
-									відділення.</cite>
-							</blockquote>
-							<blockquote class="slider-clinic__blockquote">
-								<p>
-									«Лікарі з перших годин повномасштабної війни перебували на робочих місцях. Не покидали лікарню
-									ні вдень, ні вночі – жили разом із пацієнтами у приміщенні відділення майже два місяці.
-									  У перші дні лікарі зіштовхнулися насамперед із проблемами морального характеру. Такої
-									кількості пацієнтів ми ніколи не бачили. Більшість постраждалих везли із Маріуполя з
-									переохолодженням, з недоїданням, з пораненнями. Наші лікарі розуміли, що зупинятися не можна,
-									тільки вони здатні врятувати життя цих людей»,
-								</p>
-								<cite class="slider-clinic__cite">- Ольга Назаренко, завідувачка відділення
-									анестезіології.</cite>
-							</blockquote>
+			<section id="clinics" class="page__clinics clinics">
+				<div class="clinics__item clinic">
+					<div class="clinic__container">
+						<h2 class="clinic__title title">ZAPORIZHYA</h2>
+						<div class="clinic__text text">
+							<p>
+								Zaporizhzhia. 5th City Hospital of Emergency and Urgent Medical Care.  
+							</p>
 						</div>
 					</div>
-					<div class="slider-clinic__item">
-						<div class="slider-clinic__images">
-							<img class="ibg" src="img/slider/01.webp" alt="Image">
+					<div class="clinic__slider slider-clinic">
+						<!--Спрощене заповнення даними для слайдера, потім js перетворить це на франкенштейна, приклад якого можна побачити в файлі slider-full.html-->
+						<div class="slider-clinic__item">
+							<div class="slider-clinic__images">
+
+								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
+									alt="Image">
+
+
+								<source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp"
+									alt="Image">
+
+
+								<source srcset="img/slider/03.webp" type="image/webp"><img class="ibg" src="img/slider/03.webp"
+									alt="Image">
+
+
+								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
+									alt="Image">
+
+							</div>
+							<div class="slider-clinic__text">
+								<blockquote class="slider-clinic__blockquote">
+									<p>
+										«Емоційне вигорання торкнулося багатьох наших колег, всі ми прекрасно розуміємо, що відбути
+										навіть у коротку відпустку  - недозволена розкіш. В будь-який момент ми можемо знадобитись
+										тут,
+										у лікарні...»
+									</p>
+									<cite class="slider-clinic__cite">- Євген Яцун, завідувач ортопедично-травматологічного
+										відділення.</cite>
+								</blockquote>
+								<blockquote class="slider-clinic__blockquote">
+									<p>
+										«Лікарі з перших годин повномасштабної війни перебували на робочих місцях. Не покидали лікарню
+										ні вдень, ні вночі – жили разом із пацієнтами у приміщенні відділення майже два місяці.
+										  У перші дні лікарі зіштовхнулися насамперед із проблемами морального характеру. Такої
+										кількості пацієнтів ми ніколи не бачили. Більшість постраждалих везли із Маріуполя з
+										переохолодженням, з недоїданням, з пораненнями. Наші лікарі розуміли, що зупинятися не можна,
+										тільки вони здатні врятувати життя цих людей»,
+									</p>
+									<cite class="slider-clinic__cite">- Ольга Назаренко, завідувачка відділення
+										анестезіології.</cite>
+								</blockquote>
+							</div>
 						</div>
-						<div class="slider-clinic__text">
-							<blockquote class="slider-clinic__blockquote">
-								<p>
-									«Вікна центральної операційної виходять на острів Хортиця, і бували випадки, коли ми на власні
-									очі бачили, як летять та вибухають ракети.Спочатку лякалися, це відволікало від роботи, а
-									зараз
-									ставимося до цього спокійно – операції ніхто не зупиняє»,
-								</p>
-								<cite class="slider-clinic__cite">- Євген Яцун, завідувач ортопедично-травматологічного
-									відділення.</cite>
-							</blockquote>
+						<div class="slider-clinic__item">
+							<div class="slider-clinic__images">
+
+								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
+									alt="Image">
+
+							</div>
+							<div class="slider-clinic__text">
+								<blockquote class="slider-clinic__blockquote">
+									<p>
+										«Вікна центральної операційної виходять на острів Хортиця, і бували випадки, коли ми на власні
+										очі бачили, як летять та вибухають ракети.Спочатку лякалися, це відволікало від роботи, а
+										зараз
+										ставимося до цього спокійно – операції ніхто не зупиняє»,
+									</p>
+									<cite class="slider-clinic__cite">- Євген Яцун, завідувач ортопедично-травматологічного
+										відділення.</cite>
+								</blockquote>
+							</div>
+						</div>
+						<div class="slider-clinic__item">
+							<div class="slider-clinic__images">
+
+								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
+									alt="Image">
+
+
+								<source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp"
+									alt="Image">
+
+							</div>
+							<div class="slider-clinic__text">
+								<blockquote class="slider-clinic__blockquote">
+									<p>
+										«Вікна центральної операційної виходять на острів Хортиця, і бували випадки, коли ми на власні
+										очі бачили, як летять та вибухають ракети.Спочатку лякалися, це відволікало від роботи, а
+										зараз
+										ставимося до цього спокійно – операції ніхто не зупиняє»,
+									</p>
+									<cite class="slider-clinic__cite">- Євген Яцун, завідувач ортопедично-травматологічного
+										відділення.</cite>
+								</blockquote>
+							</div>
+						</div>
+						<div class="slider-clinic__background">
+							<img src="img/background.svg" alt="background" class="ibg">
+						</div>
+						<div class="slider-clinic__background slider-clinic__background--mobile">
+							<img src="img/background-mobile.svg" alt="background" class="ibg">
 						</div>
 					</div>
-					<div class="slider-clinic__item">
-						<div class="slider-clinic__images">
-							<img class="ibg" src="img/slider/01.webp" alt="Image">
-							<img class="ibg" src="img/slider/02.webp" alt="Image">
-						</div>
-						<div class="slider-clinic__text">
-							<blockquote class="slider-clinic__blockquote">
-								<p>
-									«Вікна центральної операційної виходять на острів Хортиця, і бували випадки, коли ми на власні
-									очі бачили, як летять та вибухають ракети.Спочатку лякалися, це відволікало від роботи, а
-									зараз
-									ставимося до цього спокійно – операції ніхто не зупиняє»,
-								</p>
-								<cite class="slider-clinic__cite">- Євген Яцун, завідувач ортопедично-травматологічного
-									відділення.</cite>
-							</blockquote>
-						</div>
+					<div class="clinic__video-box video-box">
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain"
+								src="img/play.svg" /></button>
+						<video poster="img/video-2.webp" class='video-box__video'>
+							<source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'>
+							<source src='https://www.w3schools.com/html/mov_bbb.ogg' type='video/ogg'>
+						</video>
 					</div>
-					<div class="slider-clinic__background">
-						<img src="img/background.svg" alt="background" class="ibg">
-					</div>
-					<div class="slider-clinic__background slider-clinic__background--mobile">
-						<img src="img/background-mobile.svg" alt="background" class="ibg">
-					</div>
-				</div>
-				<div class="clinic__video-box video-box">
-					<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain"
-							src="img/play.svg" /></button>
-					<video poster="img/video-2.webp" class='video-box__video'>
-						<source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'>
-						<source src='https://www.w3schools.com/html/mov_bbb.ogg' type='video/ogg'>
-					</video>
 				</div>
 			</section>
 		</main>
