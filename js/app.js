@@ -2871,11 +2871,11 @@
         splideTrack.appendChild(splideList);
         let backgroundImage = clinicSlider.querySelector(".slider-clinic__background");
         let backgroundImageMobile = clinicSlider.querySelector(".slider-clinic__background--mobile");
-        splideParent.appendChild(backgroundImage);
-        splideParent.appendChild(backgroundImageMobile);
         splideParent.appendChild(splideTrack);
         clinicSlider.innerHTML = "";
         clinicSlider.appendChild(splideParent);
+        clinicSlider.appendChild(backgroundImage);
+        clinicSlider.appendChild(backgroundImageMobile);
     }));
     document.querySelectorAll("[data-parent-slider]").forEach((function(parentSplide, parentIndex) {
         var splideParent = new Splide(parentSplide, {
