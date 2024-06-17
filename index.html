@@ -2,18 +2,21 @@
 <html lang="en">
 
 <head>
-	<title>Clinics</title>
+	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240617155617" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240617155617">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<a href="#" class="lang">
+		<picture><source srcset="img/lang/eng.webp" type="image/webp"><img class="ibg" src="img/lang/eng.png" alt="Language toggle"></picture>
+	</a>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
@@ -26,8 +29,7 @@
 								</a>
 							</li>
 							<li class="menu__item">
-								<a href="#promo-video" data-goto-top="30px" data-goto-header data-goto="#promo-video"
-									class="menu__link">
+								<a href="#promo-video" data-goto-top="30px" data-goto-header data-goto="#promo-video" class="menu__link">
 									video
 								</a>
 							</li>
@@ -48,9 +50,7 @@
 		</header>
 		<main class="page">
 			<div class="page__image">
-
-				<img src="img/hero.webp" alt="main image" class="ibg">
-
+				<picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.webp" alt="main image" class="ibg"></picture>
 			</div>
 			<section id="about" class="page__about about">
 				<div class="about__container">
@@ -71,15 +71,14 @@
 						</div>
 					</div>
 					<div class="about__image">
-						<img src="img/doctor.webp" alt="doctor" class="ibg">
+						<picture><source srcset="img/doctor.webp" type="image/webp"><img src="img/doctor.webp" alt="doctor" class="ibg"></picture>
 					</div>
 				</div>
 			</section>
 			<div id="promo-video" class="page__promo-video promo-video">
 				<div class="promo-video__container">
 					<div class="promo-video__video-box video-box">
-						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain"
-								src="img/play.svg" /></button>
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
 						<video poster="img/video-1.webp" playsinline webkit-playsinline class='video-box__video'>
 							<source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'>
 							<source src='https://www.w3schools.com/html/mov_bbb.ogg' type='video/ogg'>
@@ -101,22 +100,10 @@
 						<!--Спрощене заповнення даними для слайдера, потім js перетворить це на франкенштейна, приклад якого можна побачити в файлі slider-full.html-->
 						<div class="slider-clinic__item">
 							<div class="slider-clinic__images">
-
-								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
-									alt="Image">
-
-
-								<source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp"
-									alt="Image">
-
-
-								<source srcset="img/slider/03.webp" type="image/webp"><img class="ibg" src="img/slider/03.webp"
-									alt="Image">
-
-
-								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
-									alt="Image">
-
+								<picture><source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp" alt="Image"></picture>
+								<picture><source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp" alt="Image"></picture>
+								<picture><source srcset="img/slider/03.webp" type="image/webp"><img class="ibg" src="img/slider/03.webp" alt="Image"></picture>
+								<picture><source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp" alt="Image"></picture>
 							</div>
 							<div class="slider-clinic__text">
 								<blockquote class="slider-clinic__blockquote">
@@ -145,10 +132,7 @@
 						</div>
 						<div class="slider-clinic__item">
 							<div class="slider-clinic__images">
-
-								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
-									alt="Image">
-
+								<picture><source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp" alt="Image"></picture>
 							</div>
 							<div class="slider-clinic__text">
 								<blockquote class="slider-clinic__blockquote">
@@ -165,14 +149,8 @@
 						</div>
 						<div class="slider-clinic__item">
 							<div class="slider-clinic__images">
-
-								<source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp"
-									alt="Image">
-
-
-								<source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp"
-									alt="Image">
-
+								<picture><source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp" alt="Image"></picture>
+								<picture><source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp" alt="Image"></picture>
 							</div>
 							<div class="slider-clinic__text">
 								<blockquote class="slider-clinic__blockquote">
@@ -195,8 +173,7 @@
 						</div>
 					</div>
 					<div class="clinic__video-box video-box">
-						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain"
-								src="img/play.svg" /></button>
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
 						<video poster="img/video-2.webp" playsinline webkit-playsinline class='video-box__video'>
 							<source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'>
 							<source src='https://www.w3schools.com/html/mov_bbb.ogg' type='video/ogg'>
@@ -214,14 +191,11 @@
 					<a target="_blank" href="tel:+380502253688" class="footer__link">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
 							<g clip-path="url(#clip0_49_121)">
-								<mask id="mask0_49_121" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
-									height="20">
+								<mask id="mask0_49_121" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
 									<path d="M20 0H0V20H20V0Z" fill="white" />
 								</mask>
 								<g mask="url(#mask0_49_121)">
-									<path
-										d="M19.037 13.446L14.326 11.335L14.313 11.329C14.0684 11.2244 13.8016 11.1825 13.5368 11.2069C13.2719 11.2313 13.0173 11.3214 12.796 11.469C12.7699 11.4862 12.7449 11.5049 12.721 11.525L10.287 13.6C8.745 12.851 7.15301 11.271 6.40401 9.74904L8.48201 7.27804C8.50201 7.25304 8.52101 7.22804 8.53901 7.20104C8.68343 6.98034 8.77106 6.72736 8.79409 6.46461C8.81712 6.20186 8.77484 5.9375 8.67101 5.69504V5.68304L6.55401 0.964041C6.41675 0.647306 6.18073 0.383457 5.88119 0.21188C5.58166 0.0403037 5.23466 -0.0297973 4.89201 0.0120418C3.53698 0.190348 2.29319 0.85581 1.39294 1.88414C0.492696 2.91246 -0.00244093 4.23333 9.04864e-06 5.60004C9.04864e-06 13.54 6.46001 20 14.4 20C15.7667 20.0025 17.0876 19.5073 18.1159 18.6071C19.1442 17.7069 19.8097 16.4631 19.988 15.108C20.0299 14.7655 19.96 14.4186 19.7886 14.1191C19.6172 13.8195 19.3535 13.5835 19.037 13.446ZM14.4 18.4C11.0064 18.3963 7.75279 17.0466 5.35313 14.6469C2.95347 12.2472 1.60371 8.99367 1.60001 5.60004C1.59625 4.62353 1.94806 3.67904 2.58974 2.94295C3.23143 2.20686 4.11911 1.72951 5.08701 1.60004C5.08661 1.60403 5.08661 1.60805 5.08701 1.61204L7.18701 6.31204L5.12001 8.78604C5.09903 8.81018 5.07997 8.83592 5.06301 8.86304C4.91252 9.09396 4.82424 9.35983 4.80672 9.6349C4.7892 9.90996 4.84304 10.1849 4.96301 10.433C5.86901 12.286 7.73601 14.139 9.609 15.044C9.85897 15.1629 10.1355 15.2149 10.4115 15.1949C10.6876 15.1749 10.9538 15.0836 11.184 14.93C11.2097 14.9127 11.2344 14.894 11.258 14.874L13.689 12.8L18.389 14.905H18.4C18.2721 15.8743 17.7955 16.7638 17.0593 17.407C16.323 18.0503 15.3777 18.4033 14.4 18.4Z"
-										fill="white" />
+									<path d="M19.037 13.446L14.326 11.335L14.313 11.329C14.0684 11.2244 13.8016 11.1825 13.5368 11.2069C13.2719 11.2313 13.0173 11.3214 12.796 11.469C12.7699 11.4862 12.7449 11.5049 12.721 11.525L10.287 13.6C8.745 12.851 7.15301 11.271 6.40401 9.74904L8.48201 7.27804C8.50201 7.25304 8.52101 7.22804 8.53901 7.20104C8.68343 6.98034 8.77106 6.72736 8.79409 6.46461C8.81712 6.20186 8.77484 5.9375 8.67101 5.69504V5.68304L6.55401 0.964041C6.41675 0.647306 6.18073 0.383457 5.88119 0.21188C5.58166 0.0403037 5.23466 -0.0297973 4.89201 0.0120418C3.53698 0.190348 2.29319 0.85581 1.39294 1.88414C0.492696 2.91246 -0.00244093 4.23333 9.04864e-06 5.60004C9.04864e-06 13.54 6.46001 20 14.4 20C15.7667 20.0025 17.0876 19.5073 18.1159 18.6071C19.1442 17.7069 19.8097 16.4631 19.988 15.108C20.0299 14.7655 19.96 14.4186 19.7886 14.1191C19.6172 13.8195 19.3535 13.5835 19.037 13.446ZM14.4 18.4C11.0064 18.3963 7.75279 17.0466 5.35313 14.6469C2.95347 12.2472 1.60371 8.99367 1.60001 5.60004C1.59625 4.62353 1.94806 3.67904 2.58974 2.94295C3.23143 2.20686 4.11911 1.72951 5.08701 1.60004C5.08661 1.60403 5.08661 1.60805 5.08701 1.61204L7.18701 6.31204L5.12001 8.78604C5.09903 8.81018 5.07997 8.83592 5.06301 8.86304C4.91252 9.09396 4.82424 9.35983 4.80672 9.6349C4.7892 9.90996 4.84304 10.1849 4.96301 10.433C5.86901 12.286 7.73601 14.139 9.609 15.044C9.85897 15.1629 10.1355 15.2149 10.4115 15.1949C10.6876 15.1749 10.9538 15.0836 11.184 14.93C11.2097 14.9127 11.2344 14.894 11.258 14.874L13.689 12.8L18.389 14.905H18.4C18.2721 15.8743 17.7955 16.7638 17.0593 17.407C16.323 18.0503 15.3777 18.4033 14.4 18.4Z" fill="white" />
 								</g>
 							</g>
 							<defs>
@@ -234,9 +208,7 @@
 					</a>
 					<a target="_blank" href="mailto:example@mail.ua" class="footer__link">
 						<svg viewBox="0 0 20 20" fill="none">
-							<path
-								d="M18.3333 4.99992C18.3333 4.08325 17.5833 3.33325 16.6667 3.33325H3.33332C2.41666 3.33325 1.66666 4.08325 1.66666 4.99992V14.9999C1.66666 15.9166 2.41666 16.6666 3.33332 16.6666H16.6667C17.5833 16.6666 18.3333 15.9166 18.3333 14.9999V4.99992ZM16.6667 4.99992L9.99999 9.16659L3.33332 4.99992H16.6667ZM16.6667 14.9999H3.33332V6.66659L9.99999 10.8333L16.6667 6.66659V14.9999Z"
-								fill="white" />
+							<path d="M18.3333 4.99992C18.3333 4.08325 17.5833 3.33325 16.6667 3.33325H3.33332C2.41666 3.33325 1.66666 4.08325 1.66666 4.99992V14.9999C1.66666 15.9166 2.41666 16.6666 3.33332 16.6666H16.6667C17.5833 16.6666 18.3333 15.9166 18.3333 14.9999V4.99992ZM16.6667 4.99992L9.99999 9.16659L3.33332 4.99992H16.6667ZM16.6667 14.9999H3.33332V6.66659L9.99999 10.8333L16.6667 6.66659V14.9999Z" fill="white" />
 						</svg>
 						example@mail.ua
 					</a>
@@ -244,7 +216,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.js"></script>
+	<script src="js/app.min.js?_v=20240617155617"></script>
 </body>
 
 </html>
