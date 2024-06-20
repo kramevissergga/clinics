@@ -1,6 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,600,700,italic,700italic&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Anton:regular&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Oswald:700&display=swap);
+@font-face {
+  font-family: Impact;
+  src: url(../../fonts/Impact.woff2) format("woff2"),url(../../fonts/Impact.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
 * {
   padding: 0;
   margin: 0;
@@ -103,15 +110,16 @@ h6 {
 }
 .menu__list {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap
 }
 .menu__item {
   color: #fff;
-  font-size: 1.125rem;
   font-weight: 700;
   text-transform: uppercase
+}
+.icon-menu {
+  display: none
 }
 .splide {
   z-index: 2
@@ -244,22 +252,19 @@ h6 {
   object-fit: contain
 }
 .footer__link,
+.lang__link,
 .menu__link {
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: text-decoration-color .3s
 }
-.lang {
-  position: fixed;
-  right: 1.25rem;
-  top: 6.25rem;
-  height: 3.75rem;
-  width: 3.75rem;
-  border: .1875rem #fff solid;
-  transition: border-color .3s;
-  border-radius: 50%;
-  overflow: hidden;
-  z-index: 40
+.title {
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: Impact,sans-serif
+}
+[lang*=en] .title {
+  font-family: Anton,sans-serif
 }
 .header {
   position: fixed;
@@ -267,12 +272,37 @@ h6 {
   left: 0;
   width: 100%;
   z-index: 50;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   transition: padding .3s;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
   background-color: #005da9
 }
+.header__container {
+  position: relative
+}
+.header__menu {
+  flex-grow: 1
+}
+.header__lang {
+  position: absolute;
+  right: .9375rem;
+  top: 0
+}
+.lang {
+  display: flex;
+  gap: .3125rem
+}
+.lang__item {
+  color: #fff;
+  font-weight: 700
+}
+.lang__item:not(:last-child) {
+  padding-right: .3125rem;
+  border-right: .125rem #fff solid
+}
 .footer {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
   background-color: #005da9
 }
 .footer__container {
@@ -305,14 +335,31 @@ h6 {
   width: 1.25rem;
   flex-shrink: 0
 }
+.footer__image-link {
+  width: 2.5rem;
+  height: 2.5rem
+}
+.footer__image-link img {
+  transition: all .3s
+}
 .about__container {
+  display: grid
+}
+.about__item {
   display: grid;
-  align-items: center
+  row-gap: 1.875rem;
+  align-items: start
 }
 .about__title {
-  background-color: #fd0;
-  font-family: Anton,sans-serif;
-  margin-bottom: 1.5rem
+  color: #005caa;
+  text-align: justify
+}
+.about__title span {
+  color: #e9511c
+}
+.about__title--item {
+  color: #005caa;
+  text-align: left
 }
 .about__text {
   font-weight: 600;
@@ -320,15 +367,11 @@ h6 {
 }
 .about__image {
   max-width: 34.5rem;
-  justify-self: center
+  aspect-ratio: 552/767
 }
-.title {
-  padding: .9375rem .625rem;
-  display: inline-block;
-  text-transform: uppercase
-}
-.text p:not(:last-child) {
-  margin-bottom: .625rem
+.text p {
+  text-align: justify;
+  text-indent: 1.25rem
 }
 .text--white {
   color: #fff
@@ -347,12 +390,17 @@ h6 {
   margin-bottom: 6.25rem
 }
 .clinic__title {
-  font-family: Oswald,sans-serif;
+  padding: .9375rem .625rem;
+  color: #1d1a55;
+  display: inline-block;
   background-color: #bee0ed;
   margin-bottom: 1.5rem
 }
 .clinic__text {
   font-weight: 700
+}
+.clinic__video-box {
+  background-color: #015fa8
 }
 .slider-clinic {
   position: relative;
@@ -380,7 +428,11 @@ h6 {
   font-style: italic;
   line-height: 1.4
 }
-.slider-clinic__blockquote p:not(:last-child) {
+.slider-clinic__blockquote p {
+  text-align: justify;
+  text-indent: 1.875rem
+}
+.slider-clinic__blockquote p:not(:last-child):last-of-type {
   margin-bottom: .9375rem
 }
 .slider-clinic__cite {
@@ -431,9 +483,8 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  scale: 1.2
+  -o-object-fit: contain;
+  object-fit: contain
 }
 .video-box__play {
   position: absolute;
@@ -461,14 +512,36 @@ h6 {
   transform: scale(0)
 }
 .page {
-  padding-top: 5.125rem
+  padding-top: 2.25rem
+}
+.page__image {
+  max-height: calc(100svh - 2.25rem);
+  overflow: hidden
 }
 .page__promo-video {
   background-color: #00af9c
 }
 @media (min-width:47.99875em) {
-  .about__container {
-    grid-template-columns: 1fr 48.421053%
+  .menu__list {
+    justify-content: center
+  }
+  .about__item {
+    grid-template-columns: 1fr 1fr
+  }
+  .about__item:nth-child(odd) .about__image {
+    grid-column: 1;
+    grid-row: 2
+  }
+  .about__item:nth-child(odd) .about__text {
+    grid-column: 1
+  }
+  .about__item:nth-child(odd)::before {
+    grid-column: 1
+  }
+  .about__item::before {
+    content: "";
+    grid-column: 2;
+    grid-row: 1
   }
   .slider-clinic__container {
     grid-template-columns: 1fr 45.221971%
@@ -488,11 +561,8 @@ h6 {
   .menu__list {
     gap: 2.5rem
   }
-  .footer {
-    padding-top: 1.625rem
-  }
-  .footer {
-    padding-bottom: 1.625rem
+  .title {
+    font-size: 5rem
   }
   .footer__contacts {
     -webkit-column-gap: 3.125rem;
@@ -500,10 +570,15 @@ h6 {
     column-gap: 3.125rem
   }
   .about__container {
-    gap: 8.375rem
+    gap: 3.75rem
   }
-  .title {
-    font-size: 6rem
+  .about__item {
+    -webkit-column-gap: 5rem;
+    -moz-column-gap: 5rem;
+    column-gap: 5rem
+  }
+  .about__title--item {
+    font-size: 3.75rem
   }
   .clinics__item:not(:last-child) {
     margin-bottom: 3.75rem
@@ -536,44 +611,23 @@ h6 {
     margin-bottom: 4.125rem
   }
 }
-@media (max-width:25em) {
-  .menu__list {
-    justify-content: space-between
-  }
-  .menu__item {
-    font-size: .875rem
-  }
-  .lang {
-    height: 2.5rem;
-    width: 2.5rem;
-    top: 3.125rem;
-    right: .625rem
-  }
-  .header {
-    padding-top: 1rem;
-    padding-bottom: 1rem
-  }
-  .page {
-    padding-top: 2.875rem
-  }
-}
 @media (max-width:20em) {
   .menu__list {
     gap: 1.5625rem
   }
-  .footer {
-    padding-top: .75rem
-  }
-  .footer {
-    padding-bottom: .75rem
+  .title {
+    font-size: 1.875rem
   }
   .footer__contacts {
     -webkit-column-gap: .625rem;
     -moz-column-gap: .625rem;
     column-gap: .625rem
   }
-  .title {
-    font-size: 3rem
+  .about__container {
+    gap: 1.875rem
+  }
+  .about__title--item {
+    font-size: 1.5625rem
   }
   .clinics__item:not(:last-child) {
     margin-bottom: 1.875rem
@@ -615,8 +669,10 @@ h6 {
     height: 1rem;
     width: 1rem
   }
-  .about__container {
-    gap: 1.5rem
+  .about__item {
+    -webkit-column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+    column-gap: 1.5rem
   }
   .clinic__container:not(:last-child) {
     margin-bottom: 1.5rem
@@ -645,6 +701,86 @@ h6 {
     aspect-ratio: 342/200
   }
 }
+@media (max-width:31.25em) {
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    overflow: auto;
+    padding: 5rem .9375rem .9375rem 1.875rem;
+    transition: left .3s;
+    background-color: #005da9
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 3.125rem;
+    left: -100%;
+    top: 0;
+    transition: left .3s;
+    z-index: 2
+  }
+  .menu-open .menu__body {
+    left: 0
+  }
+  .menu-open .menu__body::before {
+    left: 0
+  }
+  .menu__list {
+    flex-direction: column
+  }
+  .menu__item {
+    font-size: 1.5rem
+  }
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 1.875rem;
+    height: 1rem;
+    z-index: 5
+  }
+  .icon-menu span,
+  .icon-menu::after,
+  .icon-menu::before {
+    content: "";
+    transition: all .3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: .125rem;
+    background-color: #fff
+  }
+  .icon-menu::before {
+    top: 0
+  }
+  .icon-menu::after {
+    bottom: 0
+  }
+  .icon-menu span {
+    top: calc(50% - .0625rem)
+  }
+  .menu-open .icon-menu span {
+    width: 0
+  }
+  .menu-open .icon-menu::before {
+    top: calc(50% - .0625rem);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+  }
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - .0625rem);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+}
+@media (max-width:31.25em) and (any-hover:none) {
+  .icon-menu {
+    cursor: default
+  }
+}
 @media (min-width:20em) and (max-width:72.5em) {
   @supports (gap:clamp(1.5625rem ,1.2053571429rem + 1.7857142857vw ,2.5rem)) {
     .menu__list {
@@ -656,24 +792,14 @@ h6 {
       gap: calc(1.5625rem + .9375 * (100vw - 20rem)/ 52.5)
     }
   }
-  @supports (padding-top:clamp(0.75rem ,0.4166666667rem + 1.6666666667vw ,1.625rem)) {
-    .footer {
-      padding-top: clamp(.75rem ,.4166666667rem + 1.6666666667vw ,1.625rem)
+  @supports (font-size:clamp(1.875rem ,0.6845238095rem + 5.9523809524vw ,5rem)) {
+    .title {
+      font-size: clamp(1.875rem ,.6845238095rem + 5.9523809524vw ,5rem)
     }
   }
-  @supports not (padding-top:clamp(0.75rem ,0.4166666667rem + 1.6666666667vw ,1.625rem)) {
-    .footer {
-      padding-top: calc(.75rem + .875 * (100vw - 20rem)/ 52.5)
-    }
-  }
-  @supports (padding-bottom:clamp(0.75rem ,0.4166666667rem + 1.6666666667vw ,1.625rem)) {
-    .footer {
-      padding-bottom: clamp(.75rem ,.4166666667rem + 1.6666666667vw ,1.625rem)
-    }
-  }
-  @supports not (padding-bottom:clamp(0.75rem ,0.4166666667rem + 1.6666666667vw ,1.625rem)) {
-    .footer {
-      padding-bottom: calc(.75rem + .875 * (100vw - 20rem)/ 52.5)
+  @supports not (font-size:clamp(1.875rem ,0.6845238095rem + 5.9523809524vw ,5rem)) {
+    .title {
+      font-size: calc(1.875rem + 3.125 * (100vw - 20rem)/ 52.5)
     }
   }
   @supports ((-moz-column-gap:clamp(0.625rem ,-0.3273809524rem + 4.7619047619vw ,3.125rem)) or (column-gap:clamp(0.625rem ,-0.3273809524rem + 4.7619047619vw ,3.125rem))) {
@@ -690,14 +816,24 @@ h6 {
       column-gap: calc(.625rem + 2.5 * (100vw - 20rem)/ 52.5)
     }
   }
-  @supports (font-size:clamp(3rem ,1.8571428571rem + 5.7142857143vw ,6rem)) {
-    .title {
-      font-size: clamp(3rem ,1.8571428571rem + 5.7142857143vw ,6rem)
+  @supports (gap:clamp(1.875rem ,1.1607142857rem + 3.5714285714vw ,3.75rem)) {
+    .about__container {
+      gap: clamp(1.875rem ,1.1607142857rem + 3.5714285714vw ,3.75rem)
     }
   }
-  @supports not (font-size:clamp(3rem ,1.8571428571rem + 5.7142857143vw ,6rem)) {
-    .title {
-      font-size: calc(3rem + 3 * (100vw - 20rem)/ 52.5)
+  @supports not (gap:clamp(1.875rem ,1.1607142857rem + 3.5714285714vw ,3.75rem)) {
+    .about__container {
+      gap: calc(1.875rem + 1.875 * (100vw - 20rem)/ 52.5)
+    }
+  }
+  @supports (font-size:clamp(1.5625rem ,0.7291666667rem + 4.1666666667vw ,3.75rem)) {
+    .about__title--item {
+      font-size: clamp(1.5625rem ,.7291666667rem + 4.1666666667vw ,3.75rem)
+    }
+  }
+  @supports not (font-size:clamp(1.5625rem ,0.7291666667rem + 4.1666666667vw ,3.75rem)) {
+    .about__title--item {
+      font-size: calc(1.5625rem + 2.1875 * (100vw - 20rem)/ 52.5)
     }
   }
   @supports (margin-bottom:clamp(1.875rem ,1.1607142857rem + 3.5714285714vw ,3.75rem)) {
@@ -792,14 +928,18 @@ h6 {
   }
 }
 @media (min-width:47.99875em) and (max-width:72.5em) {
-  @supports (gap:clamp(1.5rem ,-11.9683498291rem + 28.0597928677vw ,8.375rem)) {
-    .about__container {
-      gap: clamp(1.5rem ,-11.9683498291rem + 28.0597928677vw ,8.375rem)
+  @supports ((-moz-column-gap:clamp(1.5rem ,-5.3566144584rem + 14.2849854599vw ,5rem)) or (column-gap:clamp(1.5rem ,-5.3566144584rem + 14.2849854599vw ,5rem))) {
+    .about__item {
+      -webkit-column-gap: clamp(1.5rem ,-5.3566144584rem + 14.2849854599vw ,5rem);
+      -moz-column-gap: clamp(1.5rem ,-5.3566144584rem + 14.2849854599vw ,5rem);
+      column-gap: clamp(1.5rem ,-5.3566144584rem + 14.2849854599vw ,5rem)
     }
   }
-  @supports not (gap:clamp(1.5rem ,-11.9683498291rem + 28.0597928677vw ,8.375rem)) {
-    .about__container {
-      gap: calc(1.5rem + 6.875 * (100vw - 47.99875rem)/ 24.50125)
+  @supports not ((-moz-column-gap:clamp(1.5rem ,-5.3566144584rem + 14.2849854599vw ,5rem)) or (column-gap:clamp(1.5rem ,-5.3566144584rem + 14.2849854599vw ,5rem))) {
+    .about__item {
+      -webkit-column-gap: calc(1.5rem + 3.5 * (100vw - 47.99875rem)/ 24.50125);
+      -moz-column-gap: calc(1.5rem + 3.5 * (100vw - 47.99875rem)/ 24.50125);
+      column-gap: calc(1.5rem + 3.5 * (100vw - 47.99875rem)/ 24.50125)
     }
   }
   @supports (padding-top:clamp(0.9375rem ,-8.2454657926rem + 19.1316769553vw ,5.625rem)) {
@@ -815,11 +955,13 @@ h6 {
 }
 @media (any-hover:hover) {
   .footer__link:hover,
+  .lang__link:hover,
   .menu__link:hover {
     text-decoration-color: inherit
   }
-  .lang:hover {
-    border-color: transparent
+  .footer__image-link:hover img {
+    -webkit-transform: scale(.95);
+    transform: scale(.95)
   }
   .video-box__play:hover img {
     -webkit-transform: scale(.9);
