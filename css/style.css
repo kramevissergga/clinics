@@ -344,27 +344,25 @@ h6 {
 }
 .hero {
   position: relative;
-  min-height: calc(100svh - 2.25rem);
+  min-height: calc(100svh - 2.25rem)
+}
+.hero__container {
   display: flex;
-  align-items: start
+  align-items: center;
+  justify-content: start;
+  max-width: 81.25rem
 }
 .hero__logos {
   flex-grow: 1;
   display: flex;
-  align-items: center
+  align-items: center;
+  justify-content: start
 }
 .hero__logo {
-  height: 13.625rem
+  flex-grow: 0
 }
-.hero__title {
-  padding: .9375rem .625rem;
-  display: inline-block;
-  color: #fff;
-  background-color: #1d1a55;
-  font-family: Anton,sans-serif
-}
-.hero__title span {
-  color: #e9511c
+.hero__logo img {
+  height: auto
 }
 .hero__background {
   position: absolute;
@@ -604,25 +602,22 @@ h6 {
     column-gap: 3.125rem
   }
   .hero {
-    gap: 4.375rem
-  }
-  .hero {
     padding-top: 3.125rem
   }
-  .hero {
-    padding-left: 3.125rem
-  }
-  .hero {
-    padding-right: 3.125rem
-  }
-  .hero__logos {
+  .hero__container {
     gap: 4.375rem
   }
+  .hero__logos {
+    gap: 3.125rem
+  }
   .hero__logo {
-    height: 9.375rem
+    width: 8.75rem
+  }
+  .hero__logo--big {
+    width: 12.5rem
   }
   .hero__title {
-    font-size: 4.375rem
+    width: 27.4375rem
   }
   .about__container {
     gap: 3.75rem
@@ -679,25 +674,22 @@ h6 {
     column-gap: .625rem
   }
   .hero {
-    gap: 1.875rem
-  }
-  .hero {
     padding-top: .9375rem
   }
-  .hero {
-    padding-left: .9375rem
-  }
-  .hero {
-    padding-right: .9375rem
+  .hero__container {
+    gap: 1.875rem
   }
   .hero__logos {
     gap: .9375rem
   }
   .hero__logo {
-    height: 5.625rem
+    width: 4.375rem
+  }
+  .hero__logo--big {
+    width: 5rem
   }
   .hero__title {
-    font-size: 1.5625rem
+    width: 10.625rem
   }
   .about__container {
     gap: 1.875rem
@@ -744,9 +736,6 @@ h6 {
   .footer__link svg {
     height: 1rem;
     width: 1rem
-  }
-  .hero__logos {
-    flex-direction: column
   }
   .about__item {
     -webkit-column-gap: 1.5rem;
@@ -854,6 +843,13 @@ h6 {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
   }
+  .hero__container {
+    align-items: start
+  }
+  .hero__logos {
+    flex-direction: column;
+    align-items: start
+  }
 }
 @media (max-width:31.25em) and (any-hover:none) {
   .icon-menu {
@@ -895,16 +891,6 @@ h6 {
       column-gap: calc(.625rem + 2.5 * (100vw - 20rem)/ 52.5)
     }
   }
-  @supports (gap:clamp(1.875rem ,0.9226190476rem + 4.7619047619vw ,4.375rem)) {
-    .hero {
-      gap: clamp(1.875rem ,.9226190476rem + 4.7619047619vw ,4.375rem)
-    }
-  }
-  @supports not (gap:clamp(1.875rem ,0.9226190476rem + 4.7619047619vw ,4.375rem)) {
-    .hero {
-      gap: calc(1.875rem + 2.5 * (100vw - 20rem)/ 52.5)
-    }
-  }
   @supports (padding-top:clamp(0.9375rem ,0.1041666667rem + 4.1666666667vw ,3.125rem)) {
     .hero {
       padding-top: clamp(.9375rem ,.1041666667rem + 4.1666666667vw ,3.125rem)
@@ -915,54 +901,54 @@ h6 {
       padding-top: calc(.9375rem + 2.1875 * (100vw - 20rem)/ 52.5)
     }
   }
-  @supports (padding-left:clamp(0.9375rem ,0.1041666667rem + 4.1666666667vw ,3.125rem)) {
-    .hero {
-      padding-left: clamp(.9375rem ,.1041666667rem + 4.1666666667vw ,3.125rem)
+  @supports (gap:clamp(1.875rem ,0.9226190476rem + 4.7619047619vw ,4.375rem)) {
+    .hero__container {
+      gap: clamp(1.875rem ,.9226190476rem + 4.7619047619vw ,4.375rem)
     }
   }
-  @supports not (padding-left:clamp(0.9375rem ,0.1041666667rem + 4.1666666667vw ,3.125rem)) {
-    .hero {
-      padding-left: calc(.9375rem + 2.1875 * (100vw - 20rem)/ 52.5)
+  @supports not (gap:clamp(1.875rem ,0.9226190476rem + 4.7619047619vw ,4.375rem)) {
+    .hero__container {
+      gap: calc(1.875rem + 2.5 * (100vw - 20rem)/ 52.5)
     }
   }
-  @supports (padding-right:clamp(0.9375rem ,0.1041666667rem + 4.1666666667vw ,3.125rem)) {
-    .hero {
-      padding-right: clamp(.9375rem ,.1041666667rem + 4.1666666667vw ,3.125rem)
-    }
-  }
-  @supports not (padding-right:clamp(0.9375rem ,0.1041666667rem + 4.1666666667vw ,3.125rem)) {
-    .hero {
-      padding-right: calc(.9375rem + 2.1875 * (100vw - 20rem)/ 52.5)
-    }
-  }
-  @supports (gap:clamp(0.9375rem ,-0.3720238095rem + 6.5476190476vw ,4.375rem)) {
+  @supports (gap:clamp(0.9375rem ,0.1041666667rem + 4.1666666667vw ,3.125rem)) {
     .hero__logos {
-      gap: clamp(.9375rem ,-.3720238095rem + 6.5476190476vw ,4.375rem)
+      gap: clamp(.9375rem ,.1041666667rem + 4.1666666667vw ,3.125rem)
     }
   }
-  @supports not (gap:clamp(0.9375rem ,-0.3720238095rem + 6.5476190476vw ,4.375rem)) {
+  @supports not (gap:clamp(0.9375rem ,0.1041666667rem + 4.1666666667vw ,3.125rem)) {
     .hero__logos {
-      gap: calc(.9375rem + 3.4375 * (100vw - 20rem)/ 52.5)
+      gap: calc(.9375rem + 2.1875 * (100vw - 20rem)/ 52.5)
     }
   }
-  @supports (height:clamp(5.625rem ,4.1964285714rem + 7.1428571429vw ,9.375rem)) {
+  @supports (width:clamp(4.375rem ,2.7083333333rem + 8.3333333333vw ,8.75rem)) {
     .hero__logo {
-      height: clamp(5.625rem ,4.1964285714rem + 7.1428571429vw ,9.375rem)
+      width: clamp(4.375rem ,2.7083333333rem + 8.3333333333vw ,8.75rem)
     }
   }
-  @supports not (height:clamp(5.625rem ,4.1964285714rem + 7.1428571429vw ,9.375rem)) {
+  @supports not (width:clamp(4.375rem ,2.7083333333rem + 8.3333333333vw ,8.75rem)) {
     .hero__logo {
-      height: calc(5.625rem + 3.75 * (100vw - 20rem)/ 52.5)
+      width: calc(4.375rem + 4.375 * (100vw - 20rem)/ 52.5)
     }
   }
-  @supports (font-size:clamp(1.5625rem ,0.4910714286rem + 5.3571428571vw ,4.375rem)) {
-    .hero__title {
-      font-size: clamp(1.5625rem ,.4910714286rem + 5.3571428571vw ,4.375rem)
+  @supports (width:clamp(5rem ,2.1428571429rem + 14.2857142857vw ,12.5rem)) {
+    .hero__logo--big {
+      width: clamp(5rem ,2.1428571429rem + 14.2857142857vw ,12.5rem)
     }
   }
-  @supports not (font-size:clamp(1.5625rem ,0.4910714286rem + 5.3571428571vw ,4.375rem)) {
+  @supports not (width:clamp(5rem ,2.1428571429rem + 14.2857142857vw ,12.5rem)) {
+    .hero__logo--big {
+      width: calc(5rem + 7.5 * (100vw - 20rem)/ 52.5)
+    }
+  }
+  @supports (width:clamp(10.625rem ,4.2202380952rem + 32.0238095238vw ,27.4375rem)) {
     .hero__title {
-      font-size: calc(1.5625rem + 2.8125 * (100vw - 20rem)/ 52.5)
+      width: clamp(10.625rem ,4.2202380952rem + 32.0238095238vw ,27.4375rem)
+    }
+  }
+  @supports not (width:clamp(10.625rem ,4.2202380952rem + 32.0238095238vw ,27.4375rem)) {
+    .hero__title {
+      width: calc(10.625rem + 16.8125 * (100vw - 20rem)/ 52.5)
     }
   }
   @supports (gap:clamp(1.875rem ,1.1607142857rem + 3.5714285714vw ,3.75rem)) {
