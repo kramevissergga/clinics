@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240620180540" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240620180540">
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css?_v=20240621145941" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240621145941">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,9 +55,20 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__image">
-				<picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" alt="main image" class="ibg"></picture>
-			</div>
+			<section class="page__hero hero">
+				<div class="hero__logos">
+					<div class="hero__logo">
+						<img src="img/hero/usaid.svg" alt="usaid" class="ibg ibg--contain">
+					</div>
+					<div class="hero__logo">
+						<img src="img/hero/medicos.svg" alt="usaid" class="ibg ibg--contain">
+					</div>
+				</div>
+				<h1 class="hero__title"><span>HOSPITALS:</span> UNTOLD STORIES</h1>
+				<div class="hero__background">
+					<picture><source data-srcset="img/hero.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/hero.jpg" src="img/hero.jpg" alt="main image" class="ibg ibg--bottom"></picture>
+				</div>
+			</section>
 			<section id="about" class="page__about about">
 				<div class="about__container">
 					<h2 class="about__title title">Lorem, <span>ipsum</span> dolor. Lorem ipsum <span>dolor</span> sit amet.</h2>
@@ -103,7 +114,7 @@
 							</div>
 						</div>
 						<div class="about__image">
-							<picture><source srcset="img/doctor.webp" type="image/webp"><img src="img/doctor.webp" alt="doctor" class="ibg"></picture>
+							<picture><source data-srcset="img/doctor.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/doctor.webp" src="img/doctor.webp" alt="doctor" class="ibg"></picture>
 						</div>
 					</div>
 					<div class="about__item">
@@ -140,7 +151,7 @@
 							</div>
 						</div>
 						<div class="about__image">
-							<picture><source srcset="img/doctor.webp" type="image/webp"><img src="img/doctor.webp" alt="doctor" class="ibg"></picture>
+							<picture><source data-srcset="img/doctor.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/doctor.webp" src="img/doctor.webp" alt="doctor" class="ibg"></picture>
 						</div>
 					</div>
 				</div>
@@ -149,7 +160,57 @@
 				<div class="promo-video__container">
 					<div class="promo-video__video-box video-box">
 						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
-						<video playsinline webkit-playsinline class='video-box__video'>
+						<video data-src="https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4" playsinline webkit-playsinline class='video-box__video'>
+							<source type='video/mp4'>
+						</video>
+					</div>
+				</div>
+			</div>
+			<div id="promo-video" class="page__promo-video promo-video">
+				<div class="promo-video__container">
+					<div class="promo-video__video-box video-box">
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
+						<video data-src="https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4" playsinline webkit-playsinline class='video-box__video'>
+							<source src='https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4' type='video/mp4'>
+						</video>
+					</div>
+				</div>
+			</div>
+			<div id="promo-video" class="page__promo-video promo-video">
+				<div class="promo-video__container">
+					<div class="promo-video__video-box video-box">
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
+						<video data-src="https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4" playsinline webkit-playsinline class='video-box__video'>
+							<source src='https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4' type='video/mp4'>
+						</video>
+					</div>
+				</div>
+			</div>
+			<div id="promo-video" class="page__promo-video promo-video">
+				<div class="promo-video__container">
+					<div class="promo-video__video-box video-box">
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
+						<video data-src="https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4" playsinline webkit-playsinline class='video-box__video'>
+							<source src='https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4' type='video/mp4'>
+						</video>
+					</div>
+				</div>
+			</div>
+			<div id="promo-video" class="page__promo-video promo-video">
+				<div class="promo-video__container">
+					<div class="promo-video__video-box video-box">
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
+						<video data-src="https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4" playsinline webkit-playsinline class='video-box__video'>
+							<source src='https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4' type='video/mp4'>
+						</video>
+					</div>
+				</div>
+			</div>
+			<div id="promo-video" class="page__promo-video promo-video">
+				<div class="promo-video__container">
+					<div class="promo-video__video-box video-box">
+						<button type="button" data-play class="video-box__play"><img class="ibg ibg--contain" src="img/play.svg" /></button>
+						<video data-src="https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4" playsinline webkit-playsinline class='video-box__video'>
 							<source src='https://exhibition.david-freedman.com.ua/wp-content/uploads/2024/06/videoplayback.mp4' type='video/mp4'>
 						</video>
 					</div>
@@ -169,10 +230,10 @@
 						<!--Спрощене заповнення даними для слайдера, потім js перетворить це на франкенштейна, приклад якого можна побачити в файлі slider-full.html-->
 						<div class="slider-clinic__item">
 							<div class="slider-clinic__images">
-								<picture><source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp" alt="Image"></picture>
-								<picture><source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp" alt="Image"></picture>
-								<picture><source srcset="img/slider/03.webp" type="image/webp"><img class="ibg" src="img/slider/03.webp" alt="Image"></picture>
-								<picture><source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/01.webp" src="img/slider/01.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/02.webp" src="img/slider/02.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/03.webp" src="img/slider/03.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/01.webp" src="img/slider/01.webp" alt="Image"></picture>
 							</div>
 							<div class="slider-clinic__text">
 								<blockquote class="slider-clinic__blockquote">
@@ -216,8 +277,10 @@
 						</div>
 						<div class="slider-clinic__item">
 							<div class="slider-clinic__images">
-								<picture><source srcset="img/slider/01.webp" type="image/webp"><img class="ibg" src="img/slider/01.webp" alt="Image"></picture>
-								<picture><source srcset="img/slider/02.webp" type="image/webp"><img class="ibg" src="img/slider/02.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/01.webp" src="img/slider/01.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/02.webp" src="img/slider/02.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/03.webp" src="img/slider/03.webp" alt="Image"></picture>
+								<picture><source data-srcset="img/slider/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="ibg" data-src="img/slider/01.webp" src="img/slider/01.webp" alt="Image"></picture>
 							</div>
 							<div class="slider-clinic__text">
 								<blockquote class="slider-clinic__blockquote">
@@ -300,7 +363,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240620180540"></script>
+	<script src="js/app.min.js?_v=20240621145941"></script>
 </body>
 
 </html>
